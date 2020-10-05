@@ -1,0 +1,26 @@
+<!doctype html>
+<head>
+<script src="codemirror/lib/codemirror.js"></script>
+<link rel="stylesheet" href="codemirror/lib/codemirror.css">
+<link rel="stylesheet" href="codemirror/theme/ambiance.css">
+<script src="codemirror/mode/javascript/javascript.js"></script>
+<script src="codemirror/mode/clike/clike.js"></script>
+
+<style>
+body {
+	background-color: #eee;
+}
+</style>
+</head>
+<body>
+<div id="codeeditor"></div>
+<script>
+
+var editor = CodeMirror(document.getElementById("codeeditor"),{
+	value: "function testfunction()",
+	mode : "clike",
+	theme : "ambiance"
+});
+</script>
+</body>
+</html>
