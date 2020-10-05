@@ -39,7 +39,7 @@ body{
 
 #bild{
 	color: #000;
-	background-image: #FFF url(img/hintergrund.gif) top left no-repeat;
+	background-image: #FFF url(img/vernetzung_hintergrundbild.jpg) top left no-repeat;
 	background-size: 100.1%;
 	background-attachment: fixed;
 	/*position: fixed;*/
@@ -69,8 +69,8 @@ body{
 #header{
 	margin:0;
 	padding:0;
-	background:url(img/logo.png) no-repeat;
-	min-height: 350px;
+	background-image:url(img/vernetzung_hintergrundbild.jpg) no-repeat;
+	min-height: 50px;
 	opacity: 1.0;
     filter: alpha(opacity=100);
 	display: block;
