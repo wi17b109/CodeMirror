@@ -17,6 +17,7 @@ body{
 #button{
 	margin: 10px;
 	border-radius: 5px;
+	color: white;
 }
 
 .beitrag{
@@ -39,7 +40,7 @@ body{
 
 #bild{
 	color: #000;
-	background-image: #FFF url(img/vernetzung_hintergrundbild.jpg) top left no-repeat;
+	background-image:url(../img/vernetzung_hintergrundbild.jpg);
 	background-size: 100.1%;
 	background-attachment: fixed;
 	/*position: fixed;*/
@@ -63,13 +64,13 @@ body{
 
 #grad{
 	color: #000;
-	background-image: linear-gradient(to top, #D3D3D3 0%, #B7B7B7 50%);
+	/*background-image: linear-gradient(to top, #D3D3D3 0%, #B7B7B7 50%);*/
 }
 
 #header{
 	margin:0;
 	padding:0;
-	background-image:url(img/vernetzung_hintergrundbild.jpg) no-repeat;
+	background-image:url(../img/vernetzung_hintergrundbild.jpg);
 	min-height: 50px;
 	opacity: 1.0;
     filter: alpha(opacity=100);
