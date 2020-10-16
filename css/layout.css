@@ -20,12 +20,25 @@ body{
 	color: white;
 }
 
+a{
+	color: white;
+}
+
+a:visited{
+	color: white;
+}
+
+#mail{
+	color: #0000EE;
+}
+
 .beitrag{
 	color: #000;
-	background-color: #FFF;
-	border: solid #FF0 1;
+	background-color: white;
 	margin: 10px;
 	padding: 10px 20px;
+	border-radius: 5px;
+	box-shadow: 2px 2px grey gradient;
 }
 
 .beitrag:hover{
