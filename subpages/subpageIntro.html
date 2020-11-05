@@ -14,11 +14,40 @@
   </head>
   <body>
 	 
+	 <script type="text/javascript">
+		function toggleDiv(divNum) {
+    
+			$("#close").hide();
+			$(".slide").animate({right:'-100%'},350);
+			$(".slide1").animate({right:'-100%'},350);
+			if($("#div"+divNum)) {
+        
+				$("#div"+divNum).animate({right:'0'},350,function(){$("#close").show();});
+			}
+		}
+
+		$(document).ready(function(){
+		$("#close").on("click",function(e){
+		$(".slide").animate({right:'-200'},350);
+		$(this).hide()
+   })
+
+});
+
+	function changeContent(id,page){
+      $("#"+id).load(page); 
+    }
+</script>
+	</script>
 		<div id="bild">
 			<div id="wrap">
 			<div id="grad">
 				<button type="button" class="btn btn-secondary" id="button"><a href="../form.html">Startseite</a></button>
-				<div id="contet">
+				<button type="button" class="btn btn-secondary" id="button" onclick="toggleDiv(1)">Change Content</button>
+				<button type="button" class="btn btn-secondary" id="button" onclick="toggleDiv(2);changeContent('includedContent','sub.html')">Change Content 2</button>
+				<div id ="right-content">
+					<div class="slide1" id="div1">
+				<div id="content">
 					<div class="beitrag">
 						<h1>Intro C#</h1>
 							<div id="preview-comment"></div>
@@ -44,7 +73,20 @@
 					</div>
 				</div>
 			</div>
+			<div class="slide" id="div2">
+				<div id="conent">
+					<div class = "beitrag">
+						<h1> Hello </h1>
+						<div id="preview-comment">
+							<div id="includedContent"></div>
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
+	</div>
+	</div>
 	</div>
   </body>
 </html>
+
