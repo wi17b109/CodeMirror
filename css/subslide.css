@@ -1,0 +1,32 @@
+.slide {
+  width:100%;
+  height:100%;
+  position:absolute;
+  right:-100%;
+  top:0;
+}
+
+#close {
+  position:absolute;
+  right:10px;
+  top:10px;
+  z-index:10;
+  display:none;
+}
+
+#right-content {
+  position:absolute;
+  right:0;
+  top:75px;
+  overflow:hidden;
+  width:100%;
+  height:100%;
+}
+
+.slide1 {
+  width:100%;
+  height:100%;
+  position:absolute;
+  right:0;
+  top:0;
+}
