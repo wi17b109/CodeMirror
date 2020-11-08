@@ -28,6 +28,11 @@ a:visited{
 	color: white;
 }
 
+#navbar{
+	margin: 20px !important;
+	margin-left: 100px !important;
+}
+
 #mail{
 	color: #0000EE;
 }

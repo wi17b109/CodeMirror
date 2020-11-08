@@ -1,92 +1,141 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<title>Lets Code: Intro</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
-    <link rel="stylesheet" href="../plugin/codemirror/lib/codemirror.css">
-    <link rel="stylesheet" href="../plugin/codemirror/theme/ambiance.css">
-    <link rel="stylesheet" href="../css/main.css">
 
-    <!-- Script -->
-    <script src="../js/jquery.min.js"></script>
-    <script src="../plugin/codemirror/lib/codemirror.js"></script>
-    <script src="../plugin/codemirror/mode/clike/clike.js"></script>
-  </head>
-  <body>
-	 
-	 <script type="text/javascript">
+<head>
+	<title>Lets Code: Intro</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+	<link rel="stylesheet" href="../plugin/codemirror/lib/codemirror.css">
+	<link rel="stylesheet" href="../plugin/codemirror/theme/ambiance.css">
+	<link rel="stylesheet" href="../css/main.css">
+
+	<!-- Script -->
+	<script src="../js/jquery.min.js"></script>
+	<script src="../plugin/codemirror/lib/codemirror.js"></script>
+	<script src="../plugin/codemirror/mode/clike/clike.js"></script>
+</head>
+
+<body>
+
+	<script type="text/javascript">
 		function toggleDiv(divNum) {
-    
+
 			$("#close").hide();
-			$(".slide").animate({right:'-100%'},350);
-			$(".slide1").animate({right:'-100%'},350);
-			if($("#div"+divNum)) {
-        
-				$("#div"+divNum).animate({right:'0'},350,function(){$("#close").show();});
+			$(".slide").animate({
+				right: '-100%'
+			}, 350);
+			$(".slide1").animate({
+				right: '-100%'
+			}, 350);
+			if ($("#div" + divNum)) {
+
+				$("#div" + divNum).animate({
+					right: '0'
+				}, 350, function() {
+					$("#close").show();
+				});
 			}
 		}
 
-		$(document).ready(function(){
-		$("#close").on("click",function(e){
-		$(".slide").animate({right:'-200'},350);
-		$(this).hide()
-   })
+		$(document).ready(function() {
+			$("#close").on("click", function(e) {
+				$(".slide").animate({
+					right: '-200'
+				}, 350);
+				$(this).hide()
+			})
 
-});
+		});
 
-	function changeContent(id,page){
-      $("#"+id).load(page); 
-    }
-</script>
+		function changeContent(id, page) {
+			$("#" + id).load(page);
+		}
 	</script>
-		<div id="bild">
-			<div id="wrap">
-			<div id="grad">
-				<button type="button" class="btn btn-secondary" id="button"><a href="../form.html">Startseite</a></button>
-				<button type="button" class="btn btn-secondary" id="button" onclick="toggleDiv(1)">Change Content</button>
-				<button type="button" class="btn btn-secondary" id="button" onclick="toggleDiv(2);changeContent('includedContent','sub.html')">Change Content 2</button>
-				<div id ="right-content">
-					<div class="slide1" id="div1">
-				<div id="content">
-					<div class="beitrag">
-						<h1>Intro C#</h1>
-							<div id="preview-comment"></div>
-								<div>
-									<h3>C# ist Case-Sensitive</h3>
-										Wenn Klassen/Variablen/Funktionen in C# benannt werden, ist die Groß- und Kleinschreibung wichtig. C# ist also Case Sensitive. Es macht einen Unterschied, ob eine Variable Player oder player heißt. Generell beeinflusst die Benennung die Funktion des Programms nicht, allerdings ist der Code für andere einfacher zu lesen, wenn man sich an die üblichen Standards hält:<br />
-									<ol>
-										<li>
-											Methoden und Klassen: Pascal Case zum Beispiel „GetDetails“ oder „GetBonus“
-										</li>
-										<li>
-											Variablen und Argumente in Methoden: Camel Case zum Beispiel „firstName“ oder „userId“
-										</li>
-									</ol>
-									<br />
-									<h3>Funktionen in C#</h3>
-									Funktionen sind kleine Teile eines Programms, die eine spezifische Aufgabe erledigen. Sie sind immer aufrufbar und können zB eine Aufgabe auf die Konsole tätigen.
-									Funktionen sind werden so aufgebaut:<br />
-									public static void meineFunktion() {<br />
-									<br />
-									}
-								</div>
+	</script>
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="collapse navbar-collapse">
+			<ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+				<li class="nav-item active">
+					<a class="nav-link" href="../form.html">Startseite <span class="sr-only">(current)</span></a>
+				</li>
+				<li class="nav-item active">
+					<a class="nav-link" href="subpages/subpageIntro.html">Learn C#</a>
+				</li>
+			</ul>
+		</div>
+	</nav>
+	<div id="bild">
+		<table>
+			<tr>
+				<td>
+					<div>
+						<table class="table table-borderless leveltabelle">
+						<tr>
+								<td><a id="button" onclick="toggleDiv(1)">Change Content</a></td>
+						</tr>
+						<tr>
+								<td><a id="button" onclick="toggleDiv(2);changeContent('includedContent','sub.html')">Change Content 2</a></td>
+						</tr>
+					</table>
 					</div>
-				</div>
-			</div>
-			<div class="slide" id="div2">
-				<div id="conent">
-					<div class = "beitrag">
-						<h1> Hello </h1>
-						<div id="preview-comment">
-							<div id="includedContent"></div>
+				</td>
+				<td>
+					<div id="wrap">
+						<div id="grad">
+
+						<!--
+							<button type="button" class="btn btn-secondary" id="button" onclick="toggleDiv(1)">Change Content</button>
+							<button type="button" class="btn btn-secondary" id="button" onclick="toggleDiv(2);changeContent('includedContent','sub.html')">Change Content 2</button>
+						-->
+							<div id="right-content">
+								<div class="slide1" id="div1">
+									<div id="content">
+										<div class="beitrag">
+											<h1>Intro C#</h1>
+											<div id="preview-comment"></div>
+											<div>
+												<h3>C# ist Case-Sensitive</h3>
+												Wenn Klassen/Variablen/Funktionen in C# benannt werden, ist die Groß- und Kleinschreibung wichtig. C# ist also Case Sensitive. Es macht einen Unterschied, ob eine Variable Player oder player heißt. Generell beeinflusst die
+												Benennung die Funktion des Programms nicht, allerdings ist der Code für andere einfacher zu lesen, wenn man sich an die üblichen Standards hält:<br />
+												<ol>
+													<li>
+														Methoden und Klassen: Pascal Case zum Beispiel „GetDetails“ oder „GetBonus“
+													</li>
+													<li>
+														Variablen und Argumente in Methoden: Camel Case zum Beispiel „firstName“ oder „userId“
+													</li>
+												</ol>
+												<br />
+												<h3>Funktionen in C#</h3>
+												Funktionen sind kleine Teile eines Programms, die eine spezifische Aufgabe erledigen. Sie sind immer aufrufbar und können zB eine Aufgabe auf die Konsole tätigen.
+												Funktionen sind werden so aufgebaut:<br />
+												public static void meineFunktion() {<br />
+												<br />
+												}
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide" id="div2">
+									<div id="conent">
+										<div class="beitrag">
+											<h1> Hello </h1>
+											<div id="preview-comment">
+												<div id="includedContent"></div>
+											</div>
+										</div>
+									</div>
+
+								</div>
+							</div>
 						</div>
 					</div>
-				</div>
-			</div>
-		</div>
-	</div>
-	</div>
-	</div>
-  </body>
-</html>
 
+				</td>
+			</tr>
+
+		</table>
+
+	</div>
+</body>
+
+</html>
